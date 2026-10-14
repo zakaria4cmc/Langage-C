@@ -90,7 +90,7 @@ gcc -Wall -Wextra -std=c11 "TP_C_HAZZOU_ZAKARIA/types.c" -o types
 
 ## 👤 Auteur
 
-* **Zakaria Hazzou** - [GitHub Profile](https://www.google.com/search?q=https://github.com/zakaria4cmc)
+* **Zakaria ** - [GitHub Profile](https://www.google.com/search?q=https://github.com/zakaria4cmc)
 
 
 
