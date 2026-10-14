@@ -1,4 +1,3 @@
-```markdown
 # 💻 Travaux Pratiques (TP) - Langage C
 
 Bienvenue dans ce dépôt dédié aux travaux pratiques et exercices en **Langage C** réalisés par **Zakaria Hazzou**. Ce projet regroupe une série d'exercices progressifs couvrant les bases fondamentales ainsi que des notions plus avancées de la programmation en C.
@@ -93,9 +92,9 @@ gcc -Wall -Wextra -std=c11 "TP_C_HAZZOU_ZAKARIA/types.c" -o types
 
 * **Zakaria Hazzou** - [GitHub Profile](https://www.google.com/search?q=https://github.com/zakaria4cmc)
 
-```
 
----
+
+
 
 ### 💡 خطوات إضافة الملف على GitHub:
 1. افتح الملف `README.md` داخل مجلد مشروعك.
