@@ -1,0 +1,123 @@
+#include <stdio.h>
+int EX1()
+{
+    // 1.Decalrer et Lire
+     //recommencer:
+    int nbr_hp, statut;
+    float  MontantBrute, remise, totalNet;
+
+    printf("Heures passess : ");
+    scanf("%d", &nbr_hp);
+
+    printf("Status (1: Stagaire , 0:     Standard) : ");
+    scanf("%d", &statut);
+
+    // 2.
+    if (nbr_hp <= 0 || statut != 1 && statut != 0)
+    {
+
+        printf("Donnees invalide\n");
+
+
+        return 1;
+        //goto recommencer;
+    }
+    //3.calcul et remise
+    MontantBrute = nbr_hp * 12.00;
+    if (statut == 1)
+    {
+        remise = MontantBrute * 0.2;
+    }
+    else if (statut == 0 && nbr_hp > 5)
+    {
+        remise = MontantBrute * 0.1;
+    }
+    else
+    {
+        remise = 0;
+    }
+    // 
+    //totalNet = MontantBrute -( MontantBrute *  (remise/100));
+    //totalNet = MontantBrute *( 1 -  (remise/100));
+    totalNet = MontantBrute - remise;
+
+    // affichage
+    printf("Montant brute : %.2f DH\n", MontantBrute);
+    printf("Remise  : %.2f DH\n", remise);
+    printf("Net a payer : %.2f DH\n", totalNet);
+    return 0;
+}
+int EX2()
+{
+    char ticket; // default char  
+    int quntites; // do while int > 0
+    //float prixUnitaire; variables chque cas literals
+    float Montant; // prix decimal somme inseree
+    float total; // depenses charges
+    printf("Type de ticket (U : urbain , E : express , A : Aeroport) : ");
+    scanf(" %c", &ticket);
+    //printf("Quantite (s) : ");
+    //scanf("%d", &quntites);
+    do 
+    {
+        printf("Quantite (s) : ");
+        scanf("%d", &quntites);
+    } 
+    while(quntites < 0);
+
+
+    switch (ticket)
+    {
+        case 'U':
+        case 'u':
+            if (quntites >= 10)
+            {
+                total = quntites * 4.00;
+            }
+            else
+            {
+                total = quntites * 5;
+            }
+            break;
+        case 'E':
+        case 'e':
+            total = quntites * 8.50;
+            break;
+        case 'A':
+        case 'a':
+            total = quntites * 20.00;
+            break;
+        default :
+            printf("Type de ticket inconnu\n");
+            return 0;
+            //break;
+            
+    }
+    printf("Montant insere : ");
+    scanf("%f", &Montant);
+
+    float monnaie = Montant - total;
+    if (monnaie >= 0)
+    {
+        printf("le total du est %2.f \n", total);
+        printf("la monnaie a rendre est %2.f \n", monnaie);
+    }
+    else
+    {
+        printf("Montant insuffisant (Manque %.2f)\n", - monnaie);
+    }
+    return 0;   
+}
+
+int main()
+{
+
+    printf("Exercie 1 \n\n");
+    EX1();
+    printf("\n\n\n\n");
+    printf("Exercie 2 \n\n");
+    EX2();
+
+    return 0;
+
+}
